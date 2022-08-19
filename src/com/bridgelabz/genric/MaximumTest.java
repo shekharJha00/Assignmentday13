@@ -7,8 +7,6 @@ class MyClass<T extends Comparable<T>>
     {
         values = o;
     }
-
-
     public T max()
     {
         T v = values[0];
@@ -17,8 +15,6 @@ class MyClass<T extends Comparable<T>>
                 v = values[i];
         return v;
     }
-
-
-    }
+}
 
   
