@@ -1,20 +1,51 @@
 package com.bridgelabz.genric;
 
-class MyClass<T extends Comparable<T>>
-{
-    T[] values;
-    MyClass(T[] o)
-    {
-        values = o;
-    }
-    public T max()
-    {
-        T v = values[0];
-        for(int i=1; i < values.length;i++)
-            if(values[i].compareTo(v) > 0)
-                v = values[i];
-        return v;
-    }
+public class MaximumTest<T extends Comparable<T>>
+        {
+        T x,y,z;
+public MaximumTest(T x,T y,T z) {
+
+
+    this.x = x;
+    this.y = y;
+    this.z = z;
 }
+        public T maximum() {
+        return MaximumTest.maximum(x,y,z);
+        }
+
+public static<T extends Comparable<T>>T maximum(T x,T y,T z) {
+    T max = x;
+    if (y.compareTo(max) > 0) {
+        max = y;
+    }
+
+    if (z.compareTo(max) > 0) {
+        max = z;
+
+          }
+    return max;}
+
+public static String testMaximum(String x,String y,String z){
+        String max = x;
+        if(y.compareTo(max)>0){
+        max = y;
+        }
+        if(z.compareTo(max)>0){
+        max = z;
+
+
+
+} return max;}
+
+    public static void main(String[] args) {
+      Integer xint =3,yint=5,zint=9;
+      Float xF1= 3.9f ,yF1=9.8f,zF1=6.9f;
+      String xstr="peach",ystr="apple",zstr="orange";
+      MaximumTest.testMaximum(xstr,ystr,zstr);
+      new MaximumTest(xint,yint,zint).maximum();
+      new MaximumTest(xF1,yF1,zF1).maximum();
+      new MaximumTest(xstr,ystr,zstr).maximum();
+    }}
 
   
