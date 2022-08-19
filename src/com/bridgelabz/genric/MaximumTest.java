@@ -23,7 +23,7 @@ public static<T extends Comparable<T>>T maximum(T x,T y,T z) {
     if (z.compareTo(max) > 0) {
         max = z;
 
-          }
+         }
     return max;}
 
 public static String testMaximum(String x,String y,String z){
